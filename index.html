@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password-Generator</title>
+    
+  <link rel="stylesheet" href="./assets/index-05ebcd76.css">
+</head>
+<body>
+    <div class="container bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black min-w-[100vw] h-[100vh] flex flex-col justify-center items-center gap-6 overflow-hidden">
+        <h1 class="text-red-500 text-3xl md:text-4xl font-serif text-center ">Password Generator</h1>
+        <div class="display-container  bg-[#160628] rounded-lg flex justify-between items-center min-w-[200px] h-[60px] shadow-sm  shadow-white mx-3 overflow-hidden pb-1 border-b-[5px]">
+            <div>
+                <input type="text" readonly placeholder="Password" data-passwordDisplay class="display text-xl px-5 py-3 w-[90%] bg-transparent rounded-lg placeholder-white text-white outline-none ">
+                <!-- <div data-indicator class="indicator" id="strength-indicator"></div> -->
+            </div>
+            <button data-copy class="mr-3 relative flex gap-2">
+                <span data-copyMsg class="hidden transition-all duration-200 rounded-md"></span>
+                <img src="./assets/copy_img-88fb2557.svg" alt="copy" height="23px" width="23px" class="mr-2">
+            </button>
+        </div>
+        <div class="input-container bg-[#160628] text-white min-w-[250px] flex flex-col justify-between min-h-[300px] py-4  rounded-lg  shadow-lg  shadow-white w-[300px] items-start px-5 gap-5">
+        <div class="w-full flex flex-col gap-5"> 
+            <div class="length-container flex justify-between items-center w-full" >
+                <p class="text-2xl">Password Length</p>
+                <p data-lengthNumber  class="text-2xl text-red-500 font-bold"  >0</p>
+            </div>
+            <div class="flex justify-center items-center w-full">
+                <input type="range" min="1" max="16" class="slider w-[80%] accent-red-500 hover:accent-red-500 active:accent-red-500" step="1" data-lengthSlider>
+            </div>
+        </div>
+            <div class="flex flex-col gap-2">
+            <div>
+                <input type="checkbox" id="uppercase" class="accent-red-500 h-4 w-4 text-white mr-1">
+                <label for="uppercase" class="text-[1.1rem]">Includes Uppercase letters</label>
+            </div>
+            <div>
+                <input type="checkbox" id="lowercase" class="accent-red-500 h-4 w-4 text-white mr-1">
+                <label for="lowercase" class="text-[1.1rem]">Includes Lowercase letters</label>
+            </div>
+            <div>
+                <input type="checkbox" id="numbers" class="accent-red-500 h-4 w-4 text-white mr-1">
+                <label for="numbers" class="text-[1.1rem]">Includes Numbers </label>
+            </div>
+            <div>
+                <input type="checkbox" id="symbol" class="accent-red-500 h-4 w-4 text-white mr-1">
+                <label for="symbol" class="text-[1.1rem]">Includes Symbols </label>
+            </div>
+        </div>
+
+
+            <!-- generate Password -->
+            <button class="generateButton self-cente px-4 py-2 rounded-3xl text-white mb-4 text-2xl font-serif shadow-md shadow-gray-500  bg-gradient-to-r from-red-500 via-slate-800 to-slate-900 hover:bg-gradient-to-br focus:ring-[2px] focus:outline-none focus:ring-slate-700   transition-all duration-200">Generate Password</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
